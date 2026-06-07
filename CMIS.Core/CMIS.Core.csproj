@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0BF69740-E904-4E10-AA16-DA531C9C29C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMIS.Core</RootNamespace>
+    <AssemblyName>CMIS.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\BindingConstants.cs" />
+    <Compile Include="Constants\CMISConstants.cs" />
+    <Compile Include="Constants\Enumerators.cs" />
+    <Compile Include="Constants\FieldConstants.cs" />
+    <Compile Include="Constants\MessageText.cs" />
+    <Compile Include="Constants\SessionConstants.cs" />
+    <Compile Include="Constants\TempDataConstants.cs" />
+    <Compile Include="Constants\UIConstants.cs" />
+    <Compile Include="Models\Entities\ANC.cs" />
+    <Compile Include="Models\Entities\ANCClientVaginalAssessment.cs" />
+    <Compile Include="Models\Entities\ANCFHR.cs" />
+    <Compile Include="Models\Entities\ANCPP.cs" />
+    <Compile Include="Models\Entities\ANCProtein.cs" />
+    <Compile Include="Models\Entities\ANCStopReason.cs" />
+    <Compile Include="Models\Entities\ANCVaginalAssessment.cs" />
+    <Compile Include="Models\Entities\Appointment.cs" />
+    <Compile Include="Models\Entities\ART.cs" />
+    <Compile Include="Models\Entities\ARTAdherence.cs" />
+    <Compile Include="Models\Entities\ARTAdherenceItem.cs" />
+    <Compile Include="Models\Entities\ARTAdherenceList.cs" />
+    <Compile Include="Models\Entities\ARTCareModel.cs" />
+    <Compile Include="Models\Entities\ARTCareModelChangeReason.cs" />
+    <Compile Include="Models\Entities\ARTFunctionalStatus.cs" />
+    <Compile Include="Models\Entities\ARTOI.cs" />
+    <Compile Include="Models\Entities\ARTOIList.cs" />
+    <Compile Include="Models\Entities\ARTRegimen.cs" />
+    <Compile Include="Models\Entities\ARTRegimenChangeReason.cs" />
+    <Compile Include="Models\Entities\CervicalAbnormality.cs" />
+    <Compile Include="Models\Entities\CervicalCancer.cs" />
+    <Compile Include="Models\Entities\CervicalCancerAbnormality.cs" />
+    <Compile Include="Models\Entities\CervicalCancerBiopsyResult.cs" />
+    <Compile Include="Models\Entities\CervicalCancerTestResult.cs" />
+    <Compile Include="Models\Entities\CervicalTreatment.cs" />
+    <Compile Include="Models\Entities\Chiefdom.cs" />
+    <Compile Include="Models\Entities\ChildWelfare.cs" />
+    <Compile Include="Models\Entities\Client.cs" />
+    <Compile Include="Models\Entities\Community.cs" />
+    <Compile Include="Models\Entities\Designation.cs" />
+    <Compile Include="Models\Entities\DrugDescription.cs" />
+    <Compile Include="Models\Entities\DrugDirection.cs" />
+    <Compile Include="Models\Entities\DrugForm.cs" />
+    <Compile Include="Models\Entities\DrugGroup.cs" />
+    <Compile Include="Models\Entities\DrugInterval.cs" />
+    <Compile Include="Models\Entities\EntryPoint.cs" />
+    <Compile Include="Models\Entities\Facility.cs" />
+    <Compile Include="Models\Entities\FamilyPlanning.cs" />
+    <Compile Include="Models\Entities\FeedingOption.cs" />
+    <Compile Include="Models\Entities\FPMethod.cs" />
+    <Compile Include="Models\Entities\HTS.cs" />
+    <Compile Include="Models\Entities\HTSInvitee.cs" />
+    <Compile Include="Models\Entities\HTSTestOption.cs" />
+    <Compile Include="Models\Entities\Immunization.cs" />
+    <Compile Include="Models\Entities\ImmunizationType.cs" />
+    <Compile Include="Models\Entities\IndexClient.cs" />
+    <Compile Include="Models\Entities\InpatientAdmission.cs" />
+    <Compile Include="Models\Entities\InpatientCoMorbidities.cs" />
+    <Compile Include="Models\Entities\InpatientCoMorbiditiesList.cs" />
+    <Compile Include="Models\Entities\InpatientDischargeStatus.cs" />
+    <Compile Include="Models\Entities\LabPriority.cs" />
+    <Compile Include="Models\Entities\LabRequest.cs" />
+    <Compile Include="Models\Entities\LabResult.cs" />
+    <Compile Include="Models\Entities\LabResultStatus.cs" />
+    <Compile Include="Models\Entities\LabSpecimen.cs" />
+    <Compile Include="Models\Entities\LabTestCategory.cs" />
+    <Compile Include="Models\Entities\LabTestDescription.cs" />
+    <Compile Include="Models\Entities\LabTestParameter.cs" />
+    <Compile Include="Models\Entities\LabTestReason.cs" />
+    <Compile Include="Models\Entities\LabTestRequest.cs" />
+    <Compile Include="Models\Entities\Maternity.cs" />
+    <Compile Include="Models\Entities\MaternityBabyCondition.cs" />
+    <Compile Include="Models\Entities\MaternityDangerSign.cs" />
+    <Compile Include="Models\Entities\MaternityDeliveryMode.cs" />
+    <Compile Include="Models\Entities\MaternityPregnancyOutcome.cs" />
+    <Compile Include="Models\Entities\MC.cs" />
+    <Compile Include="Models\Entities\MCAdverseEvent.cs" />
+    <Compile Include="Models\Entities\MCComplaint.cs" />
+    <Compile Include="Models\Entities\MCComplaintList.cs" />
+    <Compile Include="Models\Entities\MCMethod.cs" />
+    <Compile Include="Models\Entities\MCPhysicalExamination.cs" />
+    <Compile Include="Models\Entities\MCPhysicalExaminationList.cs" />
+    <Compile Include="Models\Entities\MCPostOpReview.cs" />
+    <Compile Include="Models\Entities\MCProcedure.cs" />
+    <Compile Include="Models\Entities\MEAllergy.cs" />
+    <Compile Include="Models\Entities\MEAllergyList.cs" />
+    <Compile Include="Models\Entities\MEChiefComplaint.cs" />
+    <Compile Include="Models\Entities\MEClinicalDiagnosis.cs" />
+    <Compile Include="Models\Entities\MEClinicalDiagnosisCategory.cs" />
+    <Compile Include="Models\Entities\MEClinicalDiagnosisList.cs" />
+    <Compile Include="Models\Entities\Medication.cs" />
+    <Compile Include="Models\Entities\MEDSMDiagnosis.cs" />
+    <Compile Include="Models\Entities\MEDSMDiagnosisCategory.cs" />
+    <Compile Include="Models\Entities\MEDSMDiagnosisList.cs" />
+    <Compile Include="Models\Entities\MEExamination.cs" />
+    <Compile Include="Models\Entities\MEExaminationList.cs" />
+    <Compile Include="Models\Entities\MENCD.cs" />
+    <Compile Include="Models\Entities\MENCDList.cs" />
+    <Compile Include="Models\Entities\OutOfStockDrugList.cs" />
+    <Compile Include="Models\Entities\OutOfStockDrugs.cs" />
+    <Compile Include="Models\Entities\PalliativeCare.cs" />
+    <Compile Include="Models\Entities\PalliativeCareDiagnosis.cs" />
+    <Compile Include="Models\Entities\PalliativeCareOutcome.cs" />
+    <Compile Include="Models\Entities\PalliativeCarePainScore.cs" />
+    <Compile Include="Models\Entities\PalliativeCarePsychoSocialSupport.cs" />
+    <Compile Include="Models\Entities\PalliativeCareSideEffect.cs" />
+    <Compile Include="Models\Entities\PalliativeCareSideEffectList.cs" />
+    <Compile Include="Models\Entities\PNC.cs" />
+    <Compile Include="Models\Entities\PNCBreastCondition.cs" />
+    <Compile Include="Models\Entities\PNCChild.cs" />
+    <Compile Include="Models\Entities\PNCChildConditionOfUmbilicalCord.cs" />
+    <Compile Include="Models\Entities\PNCChildDangerSign.cs" />
+    <Compile Include="Models\Entities\PNCChildDangerSignList.cs" />
+    <Compile Include="Models\Entities\PNCDangerSign.cs" />
+    <Compile Include="Models\Entities\PNCDangerSignList.cs" />
+    <Compile Include="Models\Entities\PNCInvolution.cs" />
+    <Compile Include="Models\Entities\PNCLochia.cs" />
+    <Compile Include="Models\Entities\Prescription.cs" />
+    <Compile Include="Models\Entities\RecoveryRequest.cs" />
+    <Compile Include="Models\Entities\ReferralCommunity.cs" />
+    <Compile Include="Models\Entities\ReferralFacility.cs" />
+    <Compile Include="Models\Entities\ReferralReason.cs" />
+    <Compile Include="Models\Entities\Relative.cs" />
+    <Compile Include="Models\Entities\RelativeRelationshipType.cs" />
+    <Compile Include="Models\Entities\TBCaseDefinition.cs" />
+    <Compile Include="Models\Entities\TBCoughDuration.cs" />
+    <Compile Include="Models\Entities\TBDiseaseSite.cs" />
+    <Compile Include="Models\Entities\TBDR.cs" />
+    <Compile Include="Models\Entities\TBDRADEManagement.cs" />
+    <Compile Include="Models\Entities\TBDRADEOutcome.cs" />
+    <Compile Include="Models\Entities\TBDRAdverseEvent.cs" />
+    <Compile Include="Models\Entities\TBDRAdverseEventRecord.cs" />
+    <Compile Include="Models\Entities\TBDRAdverseEventStatus.cs" />
+    <Compile Include="Models\Entities\TBDRCultureConversion.cs" />
+    <Compile Include="Models\Entities\TBDRPatientCategory.cs" />
+    <Compile Include="Models\Entities\TBDRPatientRegistrationGroup.cs" />
+    <Compile Include="Models\Entities\TBDRRegimenType.cs" />
+    <Compile Include="Models\Entities\TBDRSeriousness.cs" />
+    <Compile Include="Models\Entities\TBDRSeverity.cs" />
+    <Compile Include="Models\Entities\TBDS.cs" />
+    <Compile Include="Models\Entities\TBDSInterimOutcome.cs" />
+    <Compile Include="Models\Entities\TBDSPatientCategory.cs" />
+    <Compile Include="Models\Entities\TBDSSmearConversionStatus.cs" />
+    <Compile Include="Models\Entities\TBPatientRegistrationGroup.cs" />
+    <Compile Include="Models\Entities\TBPopulationSubGroup.cs" />
+    <Compile Include="Models\Entities\TBRxOutcome.cs" />
+    <Compile Include="Models\Entities\TBScreening.cs" />
+    <Compile Include="Models\Entities\TBScreeningTPTReason.cs" />
+    <Compile Include="Models\Entities\Tinkhundla.cs" />
+    <Compile Include="Models\Entities\Token.cs" />
+    <Compile Include="Models\Entities\TPT.cs" />
+    <Compile Include="Models\Entities\TPTNotStartedReason.cs" />
+    <Compile Include="Models\Entities\TPTOutcome.cs" />
+    <Compile Include="Models\Entities\User.cs" />
+    <Compile Include="Models\Entities\UserAccess.cs" />
+    <Compile Include="Models\Entities\UserFeedback.cs" />
+    <Compile Include="Models\Entities\Visit.cs" />
+    <Compile Include="Models\Entities\Vital.cs" />
+    <Compile Include="Models\Entities\WHOStage.cs" />
+    <Compile Include="Models\Validations\ANCEDDDateLessThanLMPDate.cs" />
+    <Compile Include="Models\Validations\ANCIfANCHFRStatusIsNotSelected.cs" />
+    <Compile Include="Models\Validations\ANCIFFHRStatusNormalIsSelected.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\ViewModels\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
